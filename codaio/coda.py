@@ -819,6 +819,7 @@ class Table(CodaObject):
         repr=False, converter=lambda x: parse(x) if x else None, default=None
     )
     columns_storage: List[Column] = attr.ib(default=[], repr=False)
+    filter: str = attr.ib(repr=False, default=None)
 
     def __getitem__(self, item):
         """
